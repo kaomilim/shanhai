@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kaomilim.github.io/shanhai/sitemap.xml
