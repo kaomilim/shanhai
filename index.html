@@ -45,6 +45,12 @@ select{font:inherit;width:100%;min-height:48px;padding:10px;color:var(--ink);bac
 border:2px solid var(--line);border-radius:10px;margin:8px 0 16px}
 .art{background:var(--art-bg);border:1px solid var(--line);border-radius:10px;text-align:center;padding:8px}
 .art img{width:min(100%,420px);height:auto;aspect-ratio:1;display:block;margin:0 auto}
+.art video{width:min(100%,300px);height:auto;aspect-ratio:9/16;display:block;margin:0 auto;border-radius:8px;
+background:var(--art-bg)}
+.strip{display:flex;gap:10px;overflow-x:auto;padding:4px 0 10px;margin:1em 0;scroll-snap-type:x proximity}
+.strip a{flex:0 0 auto;width:120px;scroll-snap-align:start;border:1px solid var(--line);border-radius:8px;overflow:hidden;
+line-height:0}
+.strip video{width:100%;aspect-ratio:9/16;display:block;background:var(--art-bg)}
 .name{font-size:3.4rem;line-height:1.1;margin:.3em 0 0;color:var(--ink)}
 .names{margin:0 0 .6em;font-size:1.1rem}
 .chip{display:inline-block;font-size:.8rem;border:1px solid var(--seal);color:var(--seal);padding:1px 8px;
@@ -76,7 +82,7 @@ color:var(--ink);background:var(--panel);border:2px solid var(--line);border-rad
 <section id="intro"><h1>本命神兽</h1><p class="sub"><span class="l-en">Which beast of the 山海经 is yours?</span><span class="l-zh">你是《山海经》里的哪一只异兽？</span><span class="l-zht">你是《山海經》裡的哪一隻異獸？</span></p>
 <div class="card"><p><span class="l-en">Seven questions on a mountain road. One of 75 beasts from a 2,000-year-old book will step out to meet you.</span><span class="l-zh">山径上的七个问题。一部两千年古书里的 75 只异兽，会有一只走出来与你相见。</span><span class="l-zht">山徑上的七個問題。一部兩千年古書裡的 75 只異獸，會有一隻走出來與你相見。</span></p>
 <button id="start" type="button" class="btn primary"><span class="l-en">Begin the walk</span><span class="l-zh">开始上路</span><span class="l-zht">開始上路</span></button>
-<p class="small"><span class="l-en">Nothing is collected or stored. The same answers always give the same beast.</span><span class="l-zh">不收集、不保存任何信息。答案相同，遇见的异兽也相同。</span><span class="l-zht">不收集、不儲存任何資訊。答案相同，遇見的異獸也相同。</span></p></div></section>
+<p class="small"><span class="l-en">Nothing is collected or stored. The same answers always give the same beast.</span><span class="l-zh">不收集、不保存任何信息。答案相同，遇见的异兽也相同。</span><span class="l-zht">不收集、不儲存任何資訊。答案相同，遇見的異獸也相同。</span></p></div><div class="strip"><a href="beast/jiuweihu/index.html" aria-label="九尾狐 Nine-tailed Fox"><video autoplay muted loop playsinline preload="metadata" poster="clip/jiuweihu.jpg"><source src="clip/jiuweihu.mp4" type="video/mp4"></video></a><a href="beast/xiwangmu/index.html" aria-label="西王母 Queen Mother of the West"><video autoplay muted loop playsinline preload="metadata" poster="clip/xiwangmu.jpg"><source src="clip/xiwangmu.mp4" type="video/mp4"></video></a><a href="beast/kui/index.html" aria-label="夔 Kui, the Thunder Beast"><video autoplay muted loop playsinline preload="metadata" poster="clip/kui.jpg"><source src="clip/kui.mp4" type="video/mp4"></video></a><a href="beast/zhulong/index.html" aria-label="烛龙 Torch Dragon"><video autoplay muted loop playsinline preload="metadata" poster="clip/zhulong.jpg"><source src="clip/zhulong.mp4" type="video/mp4"></video></a><a href="beast/bifang/index.html" aria-label="毕方 Bifang"><video autoplay muted loop playsinline preload="metadata" poster="clip/bifang.jpg"><source src="clip/bifang.mp4" type="video/mp4"></video></a><a href="beast/jingwei/index.html" aria-label="精卫 Jingwei"><video autoplay muted loop playsinline preload="metadata" poster="clip/jingwei.jpg"><source src="clip/jingwei.mp4" type="video/mp4"></video></a></div></section>
 <section id="quiz" hidden><div class="progress" aria-hidden="true"><i id="bar"></i></div>
 <p class="small" id="qn" aria-live="polite"></p><h2 id="qp" tabindex="-1"></h2><div id="answers"></div>
 <button id="back" type="button" class="btn" hidden><span class="l-en">Back</span><span class="l-zh">返回</span><span class="l-zht">返回</span></button></section>
@@ -161,5 +167,9 @@ document.addEventListener('langchange',function(){
   if(!screens.quiz.hidden)renderQ();
   if(!screens.result.hidden&&cur>=0){showResult(cur,true);$('copied').textContent='';}
 });
+})();
+</script><script>
+(function(){if(!window.matchMedia||!matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+var v=document.querySelectorAll('video');for(var i=0;i<v.length;i++){v[i].removeAttribute('autoplay');v[i].pause();v[i].controls=true;}
 })();
 </script></body></html>

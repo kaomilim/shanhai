@@ -45,6 +45,12 @@ select{font:inherit;width:100%;min-height:48px;padding:10px;color:var(--ink);bac
 border:2px solid var(--line);border-radius:10px;margin:8px 0 16px}
 .art{background:var(--art-bg);border:1px solid var(--line);border-radius:10px;text-align:center;padding:8px}
 .art img{width:min(100%,420px);height:auto;aspect-ratio:1;display:block;margin:0 auto}
+.art video{width:min(100%,300px);height:auto;aspect-ratio:9/16;display:block;margin:0 auto;border-radius:8px;
+background:var(--art-bg)}
+.strip{display:flex;gap:10px;overflow-x:auto;padding:4px 0 10px;margin:1em 0;scroll-snap-type:x proximity}
+.strip a{flex:0 0 auto;width:120px;scroll-snap-align:start;border:1px solid var(--line);border-radius:8px;overflow:hidden;
+line-height:0}
+.strip video{width:100%;aspect-ratio:9/16;display:block;background:var(--art-bg)}
 .name{font-size:3.4rem;line-height:1.1;margin:.3em 0 0;color:var(--ink)}
 .names{margin:0 0 .6em;font-size:1.1rem}
 .chip{display:inline-block;font-size:.8rem;border:1px solid var(--seal);color:var(--seal);padding:1px 8px;
