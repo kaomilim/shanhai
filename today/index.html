@@ -3,13 +3,16 @@
 (function(){var d=document.documentElement,l=null;
 try{l=localStorage.getItem('bq-lang');}catch(e){}
 var n=((navigator.languages&&navigator.languages[0])||navigator.language||'en').toLowerCase();
-var hant=/hant|-tw|-hk|-mo/.test(n);
+var hant=/hant|-tw|-hk|-mo/.test(n),q=null;
+try{q=new URLSearchParams(location.search).get('lang');}catch(e){}
+if(q==='zht'){hant=true;q='zh';}else if(q==='zh'){hant=false;}
 window.bqSetLang=function(c,keep){
   d.setAttribute('data-lang',c==='en'?'en':(hant?'zht':'zh'));
   d.lang=c==='en'?'en':(hant?'zh-Hant':'zh-Hans');
   if(!keep){try{localStorage.setItem('bq-lang',c);}catch(e){}}
 };
-window.bqSetLang(l==='en'||l==='zh'?l:(/^zh/.test(n)?'zh':'en'),true);
+if(q==='en'||q==='zh'){window.bqSetLang(q,true);}   /* a shared link's ?lang= wins and is never stored */
+else window.bqSetLang(l==='en'||l==='zh'?l:(/^zh/.test(n)?'zh':'en'),true);
 })();
 </script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;600&display=swap"><style>
 :root{--bg:#f4efe0;--panel:#fbf8ee;--ink:#1f1d1a;--muted:#5b5448;--seal:#b3261e;--jade:#1f6b50;
@@ -162,6 +165,9 @@ function shareText(day,g,aid,url,hant){var won=g.length>0&&g[g.length-1]===aid,g
   for(i=0;i<g.length;i++)grid+=(g[i]===aid?'🟢':'🔴');
   return (hant?'每日一獸 #':'每日一兽 #')+(day+1)+' '+(won?g.length:'X')+'/6 '+grid+(hant?' 山海經 ':' 山海经 ')+url;}
 /*SHARE-END*/
+/*LANGURL-START*/
+function langUrl(u,l){return l==='en'?u:u+'?lang='+(l==='zhHant'?'zht':'zh');}
+/*LANGURL-END*/
 var $=function(i){return document.getElementById(i);};
 function L(){var a=document.documentElement.getAttribute('data-lang');return a==='zht'?'zhHant':(a==='zh'?'zh':'en');}
 function t(k,v){var s=W[k][L()],x;if(v)for(x in v)s=s.split('{'+x+'}').join(v[x]);return s;}
@@ -247,7 +253,7 @@ function finish(first){
   $('verdict').textContent=won()?t('solved',{n:st.g.length}):t('failed',{z:ans.z});
   $('pz').textContent=ans.ps;$('pe').textContent=en()?ans.pe:'';$('src').textContent=en()?ans.sr+', 山海经':ans.sr;
   $('rlink').href='../beast/'+ans.i+'/index.html';
-  var tx=shareText(day,st.g,ans.i,pageUrl(),L()==='zhHant');$('sharetext').textContent=tx;
+  var tx=shareText(day,st.g,ans.i,langUrl(pageUrl(),L()),L()==='zhHant');$('sharetext').textContent=tx;
   var sh=$('share');sh.hidden=!navigator.share;
   sh.onclick=function(){navigator.share({text:tx}).catch(function(){});};
   $('copy').onclick=function(){var ok=function(){$('copied').textContent=t('copied');};

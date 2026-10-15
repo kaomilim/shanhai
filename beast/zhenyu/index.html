@@ -3,13 +3,16 @@
 (function(){var d=document.documentElement,l=null;
 try{l=localStorage.getItem('bq-lang');}catch(e){}
 var n=((navigator.languages&&navigator.languages[0])||navigator.language||'en').toLowerCase();
-var hant=/hant|-tw|-hk|-mo/.test(n);
+var hant=/hant|-tw|-hk|-mo/.test(n),q=null;
+try{q=new URLSearchParams(location.search).get('lang');}catch(e){}
+if(q==='zht'){hant=true;q='zh';}else if(q==='zh'){hant=false;}
 window.bqSetLang=function(c,keep){
   d.setAttribute('data-lang',c==='en'?'en':(hant?'zht':'zh'));
   d.lang=c==='en'?'en':(hant?'zh-Hant':'zh-Hans');
   if(!keep){try{localStorage.setItem('bq-lang',c);}catch(e){}}
 };
-window.bqSetLang(l==='en'||l==='zh'?l:(/^zh/.test(n)?'zh':'en'),true);
+if(q==='en'||q==='zh'){window.bqSetLang(q,true);}   /* a shared link's ?lang= wins and is never stored */
+else window.bqSetLang(l==='en'||l==='zh'?l:(/^zh/.test(n)?'zh':'en'),true);
 })();
 </script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;600&display=swap"><style>
 :root{--bg:#f4efe0;--panel:#fbf8ee;--ink:#1f1d1a;--muted:#5b5448;--seal:#b3261e;--jade:#1f6b50;
