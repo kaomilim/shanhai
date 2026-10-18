@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" data-lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Stillness, Tracks and the Vigil | Monster Trail 山海经</title><meta name="description" content="How waiting raises the odds of a rare beast."><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&amp;family=Noto+Serif+SC:wght@400;600&amp;display=swap"><style>
+:root{--bg:#f4efe0;--panel:#fbf8ee;--ink:#1f1d1a;--muted:#5b5448;--seal:#b3261e;--jade:#1f6b50;
+--line:#cfc6ae;--btn-ink:#fff;--art-bg:#f4efe0}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#171916;--panel:#21241f;--ink:#ede7d6;
+--muted:#b9b29f;--seal:#e5776e;--jade:#25775a;--line:#3c4136;--btn-ink:#fff;--art-bg:#f4efe0}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Noto Serif SC",Georgia,"Songti SC",serif;
+min-height:100vh}
+.wrap{max-width:640px;margin:0 auto;padding:20px 16px 48px}
+h1,.zh{font-family:"Ma Shan Zheng","KaiTi","STKaiti","Kaiti SC",serif;font-weight:400}
+h1{font-size:2.6rem;line-height:1.15;margin:.2em 0 .1em;color:var(--seal)}
+h2{font-size:1.4rem;line-height:1.35;margin:.4em 0;font-weight:600}
+.cn{font-family:"Noto Serif SC","Songti SC",serif}
+.sub{color:var(--muted);margin:0 0 1.2em}
+.top{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.95rem}
+.seal{display:inline-block;background:var(--seal);color:#fff;font-family:"Ma Shan Zheng","KaiTi",serif;
+font-size:1.2rem;line-height:1;padding:6px 7px;border-radius:3px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px 16px}
+.btn,button.btn{display:block;width:100%;min-height:48px;margin:10px 0;padding:12px 16px;text-align:left;
+font:inherit;color:var(--ink);background:var(--panel);border:2px solid var(--line);border-radius:10px;
+cursor:pointer}
+.btn:hover{border-color:var(--jade)}
+.btn:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--seal);outline-offset:2px}
+.primary{background:var(--jade);color:var(--btn-ink);border-color:var(--jade);text-align:center;
+text-decoration:none;font-weight:600}
+.primary:hover{border-color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap}.row>*{flex:1 1 140px}
+.small{font-size:.9rem;color:var(--muted)}
+.progress{height:6px;background:var(--line);border-radius:3px;margin:8px 0 18px;overflow:hidden}
+.progress>i{display:block;height:100%;background:var(--seal);transition:width .25s}
+select{font:inherit;width:100%;min-height:48px;padding:10px;color:var(--ink);background:var(--panel);
+border:2px solid var(--line);border-radius:10px;margin:8px 0 16px}
+.art{background:var(--art-bg);border:1px solid var(--line);border-radius:10px;text-align:center;padding:8px}
+.art img{width:min(100%,420px);height:auto;aspect-ratio:1;display:block;margin:0 auto}
+.art video{width:min(100%,300px);height:auto;aspect-ratio:9/16;display:block;margin:0 auto;border-radius:8px;
+background:var(--art-bg)}
+.strip{display:flex;gap:10px;overflow-x:auto;padding:4px 0 10px;margin:1em 0;scroll-snap-type:x proximity}
+.strip a{flex:0 0 auto;width:120px;scroll-snap-align:start;border:1px solid var(--line);border-radius:8px;overflow:hidden;
+line-height:0}
+.strip video{width:100%;aspect-ratio:9/16;display:block;background:var(--art-bg)}
+.name{font-size:3.4rem;line-height:1.1;margin:.3em 0 0;color:var(--ink)}
+.names{margin:0 0 .6em;font-size:1.1rem}
+.chip{display:inline-block;font-size:.8rem;border:1px solid var(--seal);color:var(--seal);padding:1px 8px;
+border-radius:99px;margin-left:6px;vertical-align:middle}
+.trait{font-size:1.2rem;margin:.6em 0}
+.fortune{border-left:4px solid var(--seal);padding:6px 0 6px 14px;margin:1em 0;background:transparent}
+.fortune b{color:var(--seal)}
+.fortune .zh{font-size:1.5rem;display:block}
+blockquote{margin:1em 0;padding:0}
+blockquote .cn{font-size:1.25rem;line-height:1.8;display:block}
+.store{display:block;text-align:center;padding:12px;border-radius:10px;border:2px solid var(--jade);
+color:var(--jade);text-decoration:none;font-weight:600}
+a.store:hover{background:var(--jade);color:#fff}
+.store.off{border-style:dashed;color:var(--muted);border-color:var(--line)}
+p.tester{margin:18px 0 0;text-align:center;font-size:.85rem;color:var(--muted)}
+p.tester a{color:var(--jade);font-weight:600;display:inline-block;padding:10px 4px}
+footer{margin-top:28px;color:var(--muted);font-size:.85rem;text-align:center}
+[hidden]{display:none!important}
+.l-zh,.l-zht{display:none}
+html[data-lang=zh] .l-zh,html[data-lang=zht] .l-zht{display:inline}
+html[data-lang=zh] .l-en,html[data-lang=zht] .l-en{display:none}
+.langbtn{margin-left:auto;font:inherit;font-size:.9rem;min-height:44px;min-width:56px;padding:4px 14px;
+color:var(--ink);background:var(--panel);border:2px solid var(--line);border-radius:99px;cursor:pointer}
+.langbtn:hover{border-color:var(--jade)}
+.langbtn:focus-visible{outline:3px solid var(--seal);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:380px){h1{font-size:2.2rem}.name{font-size:2.8rem}}
+
+.w-zh{display:none}
+html[data-lang=zh] .w-en,html[data-lang=zht] .w-en{display:none}
+html[data-lang=zh] .w-zh,html[data-lang=zht] .w-zh{display:revert}
+.wnav{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.wnav a{color:var(--jade);min-height:44px;display:inline-flex;align-items:center}
+.wrap main h1{margin-top:.3em}
+.wrap main h2{margin-top:1.4em}
+.wrap main h3{margin:1.1em 0 .2em;font-size:1.05rem}
+.tip{border-left:4px solid var(--jade);padding:4px 12px;background:var(--panel)}
+.toc{list-style:none;padding:0}
+.toc li{margin:0;border-top:1px solid var(--line)}
+.toc a{display:block;padding:10px 2px;min-height:44px;color:var(--ink);text-decoration:none}
+.toc small{display:block;color:var(--muted)}
+table.worlds{border-collapse:collapse;width:100%}
+table.worlds th,table.worlds td{border-top:1px solid var(--line);padding:8px 4px;text-align:left}
+ul.idx{list-style:none;padding:0}
+ul.idx li{padding:6px 0;border-top:1px solid var(--line)}
+ul.idx .src{display:block;color:var(--muted);font-size:.9rem}
+.wpager{display:flex;justify-content:space-between;gap:12px;margin-top:2em}
+.wpager a{color:var(--jade);min-height:44px;display:inline-flex;align-items:center}
+</style><script>
+(function(){var d=document.documentElement,l=null;
+try{l=localStorage.getItem('bq-lang');}catch(e){}
+var n=((navigator.languages&&navigator.languages[0])||navigator.language||'en').toLowerCase();
+var hant=/hant|-tw|-hk|-mo/.test(n),q=null;
+try{q=new URLSearchParams(location.search).get('lang');}catch(e){}
+if(q==='zht'){hant=true;q='zh';}else if(q==='zh'){hant=false;}
+window.bqSetLang=function(c,keep){
+  d.setAttribute('data-lang',c==='en'?'en':(hant?'zht':'zh'));
+  d.lang=c==='en'?'en':(hant?'zh-Hant':'zh-Hans');
+  if(!keep){try{localStorage.setItem('bq-lang',c);}catch(e){}}
+};
+if(q==='en'||q==='zh'){window.bqSetLang(q,true);}   /* a shared link's ?lang= wins and is never stored */
+else window.bqSetLang(l==='en'||l==='zh'?l:(/^zh/.test(n)?'zh':'en'),true);
+})();
+</script></head><body><div class="wrap"><header class="wnav"><a href="../../"><span class="w-en" lang="en">Monster Trail</span><span class="w-zh" lang="zh-Hans">山海异兽录</span></a><a href="../"><span class="w-en" lang="en">Guide</span><span class="w-zh" lang="zh-Hans">指南</span></a><button id="lang" type="button" class="langbtn" aria-label="Language 语言"><span class="l-en">中文</span><span class="l-zh">EN</span><span class="l-zht">EN</span></button></header><main><h1 class="w-en" lang="en">Stillness, Tracks and the Vigil</h1><h1 class="w-zh" lang="zh-Hans">静候、足迹与守夜</h1><h2 class="w-en" lang="en">Stillness</h2><h2 class="w-zh" lang="zh-Hans">静候</h2><p class="w-en" lang="en">The longer a mountain is left quiet, the likelier a rare beast. Stillness grows over <span class="fx" data-fact="still_cap">48</span> hours: after <span class="fx" data-fact="still_probe_a">8</span> hours it is <span class="fx" data-fact="still_a_pct">36</span> percent of the way, after <span class="fx" data-fact="still_probe_b">24</span> hours <span class="fx" data-fact="still_b_pct">74</span> percent. At full stillness rare beasts are about <span class="fx" data-fact="still_rare_times">3</span> times as likely and super-rare ones <span class="fx" data-fact="still_sr_times">6</span> times.</p><p class="w-zh" lang="zh-Hans">一座山安静得越久，越容易出现稀有异兽。静候在<span class="fx" data-fact="still_cap">48</span>小时内累积：<span class="fx" data-fact="still_probe_a">8</span>小时后到百分之<span class="fx" data-fact="still_a_pct">36</span>，<span class="fx" data-fact="still_probe_b">24</span>小时后到百分之<span class="fx" data-fact="still_b_pct">74</span>。完全静候时，稀有异兽约为平时的<span class="fx" data-fact="still_rare_times">3</span>倍，极稀有的约为<span class="fx" data-fact="still_sr_times">6</span>倍。</p><h2 class="w-en" lang="en">Tracks</h2><h2 class="w-zh" lang="zh-Hans">足迹</h2><p class="w-en" lang="en">Burn incense in a classic on different days and you earn <span class="fx" data-fact="track_daily">1</span> Track a day there. From <span class="fx" data-fact="track_min_sr">4</span> Tracks a super-rare beast of that classic can appear, and at <span class="fx" data-fact="track_max">16</span> the next stirring there is that beast.</p><p class="w-zh" lang="zh-Hans">在不同的日子里于同一部经里烧香，每天在那里得到<span class="fx" data-fact="track_daily">1</span>个足迹。累积到<span class="fx" data-fact="track_min_sr">4</span>个足迹时，那部经的极稀有异兽有机会出现；到<span class="fx" data-fact="track_max">16</span>个时，那里的下一个异动就是它。</p><h2 class="w-en" lang="en">The Vigil</h2><h2 class="w-zh" lang="zh-Hans">守夜</h2><p class="w-en" lang="en">With <span class="fx" data-fact="vigil_sr_tracks">9</span> Tracks you can light a great vigil. A vigil costs <span class="fx" data-fact="vigil_cost_lingzhi">1</span> lingzhi and <span class="fx" data-fact="vigil_cost_offering">1</span> offering and brings a rare beast in <span class="fx" data-fact="vigil_rare_min">8</span> to <span class="fx" data-fact="vigil_rare_max">24</span> hours, or a super-rare one in <span class="fx" data-fact="vigil_sr_min">36</span> to <span class="fx" data-fact="vigil_sr_max">84</span> hours.</p><p class="w-zh" lang="zh-Hans">累积<span class="fx" data-fact="vigil_sr_tracks">9</span>个足迹后可以点燃大守夜。一次守夜消耗灵芝<span class="fx" data-fact="vigil_cost_lingzhi">1</span>份、供品<span class="fx" data-fact="vigil_cost_offering">1</span>份，稀有异兽在<span class="fx" data-fact="vigil_rare_min">8</span>到<span class="fx" data-fact="vigil_rare_max">24</span>小时后到来，极稀有的在<span class="fx" data-fact="vigil_sr_min">36</span>到<span class="fx" data-fact="vigil_sr_max">84</span>小时后到来。</p></main><nav class="wpager"><a href="../rarity/">&larr; <span class="w-en" lang="en">Previous</span><span class="w-zh" lang="zh-Hans">上一页</span></a><a href="../ink/"><span class="w-en" lang="en">Next</span><span class="w-zh" lang="zh-Hans">下一页</span> &rarr;</a></nav><footer><span class="w-en" lang="en">A guide to Monster Trail. The game text comes from the Classic of Mountains and Seas.</span><span class="w-zh" lang="zh-Hans">山海异兽录的指南。游戏文字出自《山海经》。</span></footer></div><script>
+(function(){var b=document.getElementById('lang');if(!b)return;
+b.addEventListener('click',function(){
+  window.bqSetLang(document.documentElement.getAttribute('data-lang')==='en'?'zh':'en');
+  document.dispatchEvent(new Event('langchange'));
+});})();
+</script></body></html>

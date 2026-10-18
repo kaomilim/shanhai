@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" data-lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frequently asked questions | Monster Trail 山海经</title><meta name="description" content="Quick answers, including why a reading can seem to do nothing."><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&amp;family=Noto+Serif+SC:wght@400;600&amp;display=swap"><style>
+:root{--bg:#f4efe0;--panel:#fbf8ee;--ink:#1f1d1a;--muted:#5b5448;--seal:#b3261e;--jade:#1f6b50;
+--line:#cfc6ae;--btn-ink:#fff;--art-bg:#f4efe0}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#171916;--panel:#21241f;--ink:#ede7d6;
+--muted:#b9b29f;--seal:#e5776e;--jade:#25775a;--line:#3c4136;--btn-ink:#fff;--art-bg:#f4efe0}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Noto Serif SC",Georgia,"Songti SC",serif;
+min-height:100vh}
+.wrap{max-width:640px;margin:0 auto;padding:20px 16px 48px}
+h1,.zh{font-family:"Ma Shan Zheng","KaiTi","STKaiti","Kaiti SC",serif;font-weight:400}
+h1{font-size:2.6rem;line-height:1.15;margin:.2em 0 .1em;color:var(--seal)}
+h2{font-size:1.4rem;line-height:1.35;margin:.4em 0;font-weight:600}
+.cn{font-family:"Noto Serif SC","Songti SC",serif}
+.sub{color:var(--muted);margin:0 0 1.2em}
+.top{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.95rem}
+.seal{display:inline-block;background:var(--seal);color:#fff;font-family:"Ma Shan Zheng","KaiTi",serif;
+font-size:1.2rem;line-height:1;padding:6px 7px;border-radius:3px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px 16px}
+.btn,button.btn{display:block;width:100%;min-height:48px;margin:10px 0;padding:12px 16px;text-align:left;
+font:inherit;color:var(--ink);background:var(--panel);border:2px solid var(--line);border-radius:10px;
+cursor:pointer}
+.btn:hover{border-color:var(--jade)}
+.btn:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--seal);outline-offset:2px}
+.primary{background:var(--jade);color:var(--btn-ink);border-color:var(--jade);text-align:center;
+text-decoration:none;font-weight:600}
+.primary:hover{border-color:var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap}.row>*{flex:1 1 140px}
+.small{font-size:.9rem;color:var(--muted)}
+.progress{height:6px;background:var(--line);border-radius:3px;margin:8px 0 18px;overflow:hidden}
+.progress>i{display:block;height:100%;background:var(--seal);transition:width .25s}
+select{font:inherit;width:100%;min-height:48px;padding:10px;color:var(--ink);background:var(--panel);
+border:2px solid var(--line);border-radius:10px;margin:8px 0 16px}
+.art{background:var(--art-bg);border:1px solid var(--line);border-radius:10px;text-align:center;padding:8px}
+.art img{width:min(100%,420px);height:auto;aspect-ratio:1;display:block;margin:0 auto}
+.art video{width:min(100%,300px);height:auto;aspect-ratio:9/16;display:block;margin:0 auto;border-radius:8px;
+background:var(--art-bg)}
+.strip{display:flex;gap:10px;overflow-x:auto;padding:4px 0 10px;margin:1em 0;scroll-snap-type:x proximity}
+.strip a{flex:0 0 auto;width:120px;scroll-snap-align:start;border:1px solid var(--line);border-radius:8px;overflow:hidden;
+line-height:0}
+.strip video{width:100%;aspect-ratio:9/16;display:block;background:var(--art-bg)}
+.name{font-size:3.4rem;line-height:1.1;margin:.3em 0 0;color:var(--ink)}
+.names{margin:0 0 .6em;font-size:1.1rem}
+.chip{display:inline-block;font-size:.8rem;border:1px solid var(--seal);color:var(--seal);padding:1px 8px;
+border-radius:99px;margin-left:6px;vertical-align:middle}
+.trait{font-size:1.2rem;margin:.6em 0}
+.fortune{border-left:4px solid var(--seal);padding:6px 0 6px 14px;margin:1em 0;background:transparent}
+.fortune b{color:var(--seal)}
+.fortune .zh{font-size:1.5rem;display:block}
+blockquote{margin:1em 0;padding:0}
+blockquote .cn{font-size:1.25rem;line-height:1.8;display:block}
+.store{display:block;text-align:center;padding:12px;border-radius:10px;border:2px solid var(--jade);
+color:var(--jade);text-decoration:none;font-weight:600}
+a.store:hover{background:var(--jade);color:#fff}
+.store.off{border-style:dashed;color:var(--muted);border-color:var(--line)}
+p.tester{margin:18px 0 0;text-align:center;font-size:.85rem;color:var(--muted)}
+p.tester a{color:var(--jade);font-weight:600;display:inline-block;padding:10px 4px}
+footer{margin-top:28px;color:var(--muted);font-size:.85rem;text-align:center}
+[hidden]{display:none!important}
+.l-zh,.l-zht{display:none}
+html[data-lang=zh] .l-zh,html[data-lang=zht] .l-zht{display:inline}
+html[data-lang=zh] .l-en,html[data-lang=zht] .l-en{display:none}
+.langbtn{margin-left:auto;font:inherit;font-size:.9rem;min-height:44px;min-width:56px;padding:4px 14px;
+color:var(--ink);background:var(--panel);border:2px solid var(--line);border-radius:99px;cursor:pointer}
+.langbtn:hover{border-color:var(--jade)}
+.langbtn:focus-visible{outline:3px solid var(--seal);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:380px){h1{font-size:2.2rem}.name{font-size:2.8rem}}
+
+.w-zh{display:none}
+html[data-lang=zh] .w-en,html[data-lang=zht] .w-en{display:none}
+html[data-lang=zh] .w-zh,html[data-lang=zht] .w-zh{display:revert}
+.wnav{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.wnav a{color:var(--jade);min-height:44px;display:inline-flex;align-items:center}
+.wrap main h1{margin-top:.3em}
+.wrap main h2{margin-top:1.4em}
+.wrap main h3{margin:1.1em 0 .2em;font-size:1.05rem}
+.tip{border-left:4px solid var(--jade);padding:4px 12px;background:var(--panel)}
+.toc{list-style:none;padding:0}
+.toc li{margin:0;border-top:1px solid var(--line)}
+.toc a{display:block;padding:10px 2px;min-height:44px;color:var(--ink);text-decoration:none}
+.toc small{display:block;color:var(--muted)}
+table.worlds{border-collapse:collapse;width:100%}
+table.worlds th,table.worlds td{border-top:1px solid var(--line);padding:8px 4px;text-align:left}
+ul.idx{list-style:none;padding:0}
+ul.idx li{padding:6px 0;border-top:1px solid var(--line)}
+ul.idx .src{display:block;color:var(--muted);font-size:.9rem}
+.wpager{display:flex;justify-content:space-between;gap:12px;margin-top:2em}
+.wpager a{color:var(--jade);min-height:44px;display:inline-flex;align-items:center}
+</style><script>
+(function(){var d=document.documentElement,l=null;
+try{l=localStorage.getItem('bq-lang');}catch(e){}
+var n=((navigator.languages&&navigator.languages[0])||navigator.language||'en').toLowerCase();
+var hant=/hant|-tw|-hk|-mo/.test(n),q=null;
+try{q=new URLSearchParams(location.search).get('lang');}catch(e){}
+if(q==='zht'){hant=true;q='zh';}else if(q==='zh'){hant=false;}
+window.bqSetLang=function(c,keep){
+  d.setAttribute('data-lang',c==='en'?'en':(hant?'zht':'zh'));
+  d.lang=c==='en'?'en':(hant?'zh-Hant':'zh-Hans');
+  if(!keep){try{localStorage.setItem('bq-lang',c);}catch(e){}}
+};
+if(q==='en'||q==='zh'){window.bqSetLang(q,true);}   /* a shared link's ?lang= wins and is never stored */
+else window.bqSetLang(l==='en'||l==='zh'?l:(/^zh/.test(n)?'zh':'en'),true);
+})();
+</script></head><body><div class="wrap"><header class="wnav"><a href="../../"><span class="w-en" lang="en">Monster Trail</span><span class="w-zh" lang="zh-Hans">山海异兽录</span></a><a href="../"><span class="w-en" lang="en">Guide</span><span class="w-zh" lang="zh-Hans">指南</span></a><button id="lang" type="button" class="langbtn" aria-label="Language 语言"><span class="l-en">中文</span><span class="l-zh">EN</span><span class="l-zht">EN</span></button></header><main><h1 class="w-en" lang="en">Frequently asked questions</h1><h1 class="w-zh" lang="zh-Hans">常见问题</h1><h3 class="w-en" lang="en">I read the ash and nothing happened</h3><h3 class="w-zh" lang="zh-Hans">我读了香灰，好像什么都没发生</h3><p class="w-en" lang="en">Each stick ends one of three ways: a stirring to follow, an ink trace, or a rare beast that starts circling. Look at the “Last ash” line on the incense card, which stays there after the pop-up is gone. If it names only ink traces, those sticks found nothing this time and the traces are saved towards lingzhi. If it mentions circling, check the Coming strip: a beast is on its way. A single stick finds a beast about <span class="fx" data-fact="base_chance_pct">50</span> percent of the time, so a reading of several sticks can easily show only ink; it is the odds, not a fault.</p><p class="w-zh" lang="zh-Hans">每支香有三种结果：一个可以循迹的异动、一道墨迹，或一只开始盘旋的稀有异兽。看香炉卡片上的「上次观灰」，提示消失后它仍然在那里。如果上面只有墨迹，说明这几支香这次什么也没找到，墨迹已经存下来，将来能合成灵芝。如果提到盘旋，就去「来临」看看：有异兽正在赶来。一支香找到异兽的几率约为百分之<span class="fx" data-fact="base_chance_pct">50</span>，所以一次读好几支香只看到墨迹也很正常：这是几率，不是故障。</p><h3 class="w-en" lang="en">A read stops when my offerings run out</h3><h3 class="w-zh" lang="zh-Hans">供品用完时观灰就停了</h3><p class="w-en" lang="en">Each burnt stick spends one offering. When the offering you chose runs out, the reading stops there and the “Last ash” line says so. The sticks it did not reach are still there for your next reading. A reading also stops part-way when <span class="fx" data-fact="pending_encounters">6</span> stirrings are waiting: follow some, then read again. Pick another offering in the offering row, or wait for the daily refill of <span class="fx" data-fact="refill_millet">5</span> millet, <span class="fx" data-fact="refill_peach">1</span> peach and <span class="fx" data-fact="refill_fish">1</span> fish.</p><p class="w-zh" lang="zh-Hans">每支燃尽的香消耗一份供品。你选的供品用完后，观灰会停在那里，「上次观灰」里会写明。没读到的香还在，留给下一次。当已有<span class="fx" data-fact="pending_encounters">6</span>个异动在等你时，观灰也会中途停下：先循迹几处，再观灰。可以在供品一行换一种，或者等每天补满：小米<span class="fx" data-fact="refill_millet">5</span>份、桃<span class="fx" data-fact="refill_peach">1</span>份、鱼<span class="fx" data-fact="refill_fish">1</span>份。</p><h3 class="w-en" lang="en">Why can I not read the ash?</h3><h3 class="w-zh" lang="zh-Hans">为什么不能观灰？</h3><p class="w-en" lang="en"><span class="fx" data-fact="pending_encounters">6</span> stirrings are already waiting for you. Follow some first, then read again.</p><p class="w-zh" lang="zh-Hans">已经有<span class="fx" data-fact="pending_encounters">6</span>个异动在等你。先去循迹几个，再来观灰。</p><h3 class="w-en" lang="en">Can I lose a beast?</h3><h3 class="w-zh" lang="zh-Hans">异兽会丢吗？</h3><p class="w-en" lang="en">Never for good. A normal beast you miss slips away and leaves an ink trace, and it can stir again. A rare or super-rare beast withdraws and returns after <span class="fx" data-fact="withdraw_rare_h">6</span> or <span class="fx" data-fact="withdraw_sr_h">24</span> hours.</p><p class="w-zh" lang="zh-Hans">不会永远丢。错过的普通异兽会溜走并留下墨迹，之后还会再出现；稀有和极稀有的异兽会退去，分别在<span class="fx" data-fact="withdraw_rare_h">6</span>和<span class="fx" data-fact="withdraw_sr_h">24</span>小时后回来。</p><h3 class="w-en" lang="en">How do I meet a super-rare beast?</h3><h3 class="w-zh" lang="zh-Hans">怎样遇到极稀有的异兽？</h3><p class="w-en" lang="en">Burn incense in its classic on different days. You earn <span class="fx" data-fact="track_daily">1</span> Track a day; from <span class="fx" data-fact="track_min_sr">4</span> it can appear, and at <span class="fx" data-fact="track_max">16</span> the next stirring there is it. Or light a great vigil at <span class="fx" data-fact="vigil_sr_tracks">9</span> Tracks.</p><p class="w-zh" lang="zh-Hans">在不同的日子里于它所在的经里烧香。每天得到<span class="fx" data-fact="track_daily">1</span>个足迹，到<span class="fx" data-fact="track_min_sr">4</span>个时它有机会出现，到<span class="fx" data-fact="track_max">16</span>个时那里的下一个异动就是它。也可以在<span class="fx" data-fact="vigil_sr_tracks">9</span>个足迹时点燃大守夜。</p><h3 class="w-en" lang="en">Do I need to read Chinese?</h3><h3 class="w-zh" lang="zh-Hans">需要认识汉字吗？</h3><p class="w-en" lang="en">No. Every passage has an English version beside it, and the clue is usually in the shape of the beast. A little Chinese just makes naming feel like detective work.</p><p class="w-zh" lang="zh-Hans">不需要。每段古文旁边都有英文，线索通常就在异兽的外形里。懂一点汉字，只会让认名字更像破案。</p><h3 class="w-en" lang="en">Is assisted sealing cheating?</h3><h3 class="w-zh" lang="zh-Hans">慢一点的封印环算作弊吗？</h3><p class="w-en" lang="en">No. It is an accessibility setting and the rewards are exactly the same. Use it whenever you like.</p><p class="w-zh" lang="zh-Hans">不算。它是一项无障碍设置，奖励完全一样，随时可以用。</p><h3 class="w-en" lang="en">Does the game need the internet?</h3><h3 class="w-zh" lang="zh-Hans">游戏需要联网吗？</h3><p class="w-en" lang="en">No. The game works fully offline. The guide and the quiz are on the web.</p><p class="w-zh" lang="zh-Hans">不需要。游戏完全可以离线玩。指南和测验在网页上。</p><h3 class="w-en" lang="en">Where does the text come from?</h3><h3 class="w-zh" lang="zh-Hans">文字出自哪里？</h3><p class="w-en" lang="en">From the Classic of Mountains and Seas itself, as published on Wikisource. The English beside it is a modern rendering.</p><p class="w-zh" lang="zh-Hans">出自《山海经》原文，取自维基文库。旁边的英文是现代译文。</p></main><nav class="wpager"><a href="../beasts/">&larr; <span class="w-en" lang="en">Previous</span><span class="w-zh" lang="zh-Hans">上一页</span></a><span></span></nav><footer><span class="w-en" lang="en">A guide to Monster Trail. The game text comes from the Classic of Mountains and Seas.</span><span class="w-zh" lang="zh-Hans">山海异兽录的指南。游戏文字出自《山海经》。</span></footer></div><script>
+(function(){var b=document.getElementById('lang');if(!b)return;
+b.addEventListener('click',function(){
+  window.bqSetLang(document.documentElement.getAttribute('data-lang')==='en'?'zh':'en');
+  document.dispatchEvent(new Event('langchange'));
+});})();
+</script></body></html>
